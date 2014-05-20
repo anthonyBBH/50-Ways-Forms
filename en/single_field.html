@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Sharpie 50 Ways </title>
+
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="generator" content="Wufoo">
+    <meta name="robots" content="index, follow">
+
+    <!-- CSS -->
+    <link href="css/structure.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/wufoo.js"></script>
+    <script src="js/happy.js"></script>
+    <script src="js/happy.methods.js"></script>
+
+    <!--[if lt IE 10]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+     <script type="text/javascript">
+            $(document).ready(function () {
+                $('#form6').isHappy({
+                    fields: {
+                        // reference the field you're talking about, probably by `id`
+                        // but you could certainly do $('[name=name]') as well.
+                         '#Field226': {
+                             required: true,
+                             message: 'Please submit the your activation code.',
+                             test: happy.activationCode
+                         }
+                    }
+                });
+            });
+        </script>
+
+    <!--[if lt IE 10]>
+<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body id="public">
+
+    <header class="banner" role="banner"> </header>
+
+    <div id="container" class="ltr">
+    <div id="header">
+      <div class="silverImg"></div>
+      <div class="sharpieSmall"></div>
+      <div class="pinkImg"></div>
+    </div><!--header--> 
+
+
+    <div id="instructions"><br />
+    <h1 class="center">ORDER YOUR FREE SHARPIE 50 WAYS SAMPLE KIT</h1>
+
+    <p>Take note of the unique email address that you are filling out for this submission as you will need it for your upload submission at a later time. Once you have received your kit, your unique email will be eligible for the sweepstakes and a chance to win $500 in VISA gift cards. <a href="javascript:void();" onclick="document.getElementById('underlay').style.display='block'; document.getElementById('lightbox').style.display='block';"><span class="checkbox-text">Read more.</span></a></p>
+                  </div>
+
+
+
+        <form id="form6" name="form6" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" novalidate method="post"
+         action="https://nwlebiz.wufoo.com/forms/r1hmxidj1a4zhvc/#public">
+
+         
+                <li id="foli226" class="notranslate activation-code     ">
+                    <label class="desc" id="title226" for="Field226">
+                        ENTER YOUR ACTIVATION CODE:
+                        <span id="req_226" class="req">*</span>
+                    </label>
+                    <div>
+                        <input id="Field226" name="Field226" type="text" class="field text medium" value="" maxlength="8" tabindex="12" onkeyup="validateRange(226, 'character');" required />
+                        <label for="Field226">Maximum Allowed:
+                            <var id="rangeMaxMsg226">8</var>
+                            characters.&nbsp;&nbsp;&nbsp; <em class="currently">Currently Used:
+                                <var id="rangeUsedMsg226">0</var>
+                                characters.</em></label>
+                    </div>
+                    <p class="instruct" id="instruct226"><small>This code is located on the flyer or other promotional material given to you by our Sales Representative.</small></p>
+                </li>
+                <li id="foli228" class="notranslate cloak activation-code-verify     ">
+                    <fieldset>
+                        <![if !IE | (gte IE 8)]>
+                        <legend id="title228" class="desc hide">You must enter a valid Activation Code:*
+                        </legend>
+                        <![endif]>
+                        <!--[if lt IE 8]>
+<label id="title228" class="desc">
+You must enter a valid Activation Code:*
+<span id="req_228" class="req">*</span>
+</label>
+<![endif]-->
+                        <div>
+                            <span>
+                                <input id="Field228" name="Field228" type="checkbox" class="field checkbox" value="Activation Code" tabindex="13" />
+                                <label class="choice" for="Field228">Activation Code</label>
+                            </span>
+                        </div>
+                    </fieldset>
+                </li>
+                <li id="foli24" class="notranslate terms-of-use     ">
+                    <fieldset>
+                        <![if !IE | (gte IE 8)]>
+                        <legend id="title24" class="desc hide">
+                            <span id="req_24" class="req">*</span>
+                        </legend>
+                        <![endif]>
+                        <!--[if lt IE 8]>
+<label id="title24" class="desc">
+<span id="req_24" class="req">*</span>
+</label>
+<![endif]-->
+
+
+
+
+
+                <li class="buttons ">
+                    <div>
+                        <input id="saveForm" name="saveForm" class="btn btn-7 btTxt submit" type="submit" value="SUBMIT" />
+                        <input type="hidden" name="idstamp" id="idstamp" value="sNxfjCAB00BONI+6leJLIylkSn4hxedvLssoY+IhfHE=" />
+                    </div>
+                </li>
+
+            </ul>
+
+<script type="text/javascript">
+  
+
+        function validateCode() {            
+            var txtCode = document.getElementById("Field226");
+            var results = txtCode.value.trim() != "" ? getRemainingCode(txtCode.value) : -1;
+
+            if (results == 0) {
+                alert('This code is no longer elegible');
+                txtCode.value = '';
+                txtCode.focus();
+
+                return false;
+            }
+            else if (txtCode.value.trim() != "" && results == -1) {
+                alert('Invalid code used');
+                txtCode.value = '';
+                txtCode.focus();
+
+                return false;
+            }
+
+            return true;
+        }
+
+        function getRemainingCode(val) {
+            var count = -1; //Not a valid code
+
+            jQuery.ajax({
+                url: '../codeCheck.json?Code=' + val1 + '&formhash=wnw6cw71yjrid7',
+                dataType: 'json',
+                success: function (result) {
+                    for(var i in result){
+                       count = result[i].REMAINING;
+                    }
+
+                    if (isNaN(count))
+                        count = -1;
+                },
+
+                async: false
+            });
+
+            return count;
+
+        }
+
+</script>
+
+
+        </form>
+
+    </div> <!--container-->
+
+
+             <footer class="site-footer" role="contentinfo">
+                <a href="http://www.sharpie.com/Pages/GlobalLanding.aspx"><img class="bottom-logo left" src="img/sharpie-tiny-logo.png"  target="_blank"></a>
+
+                <p class="tiny-text right">
+                    <a class="copyright"> © 2014 </a>
+                    <a class="legal"  target="_blank" href="http://www.sharpie.com/enus/Pages/Privacy.aspx"> &nbsp;Legal & Privacy </a>
+                    <a class="terms"  target="_blank" href="http://www.sharpie50ways.com/terms.html">&nbsp;&nbsp;&nbsp;Terms of Use</a>
+                    <a class=""       target="_blank" href="http://www.sharpie.com/enus/Pages/ContactUs.aspx">&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;</a>  
+                    <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(FR)&nbsp;&nbsp;&nbsp;</a>  
+                    <a href="./index-ca.html"    target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>  
+                    <a href="./index.html" target="_blank" ><img class="flags" src="img/us.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>                      
+                </p>
+            </footer>
+
+
+   
+
+</body>
+</html>
+
+<!-- Localized -->
