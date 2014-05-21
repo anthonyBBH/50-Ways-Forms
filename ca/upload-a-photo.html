@@ -155,7 +155,7 @@ $('#marker_checkbox > .options > .checkbox').on('click', function () {
 
 <li id="foli1" class="notranslate fullName leftHalf     ">
 <label class="desc" id="title1" for="Field1">
-FIRST NAME:*
+FIRST NAME:
 <span id="req_1" class="req">*</span>
 </label>
 <div>
@@ -163,7 +163,7 @@ FIRST NAME:*
 </div>
 </li><li id="foli3" class="notranslate fullName rightHalf     ">
 <label class="desc" id="title3" for="Field3">
-LAST NAME:*
+LAST NAME:
 <span id="req_3" class="req">*</span>
 </label>
 <div>
@@ -171,7 +171,7 @@ LAST NAME:*
 </div>
 </li><li id="foli525" class="notranslate workEmail leftHalf     ">
 <label class="desc" id="title525" for="Field525">
-WORK EMAIL:*
+WORK EMAIL:
 <span id="req_525" class="req">*</span>
 </label>
 <div>
@@ -181,7 +181,7 @@ WORK EMAIL:*
 
 
 
-<li id="foli526" class="notranslate workEmail rightHalf     ">
+<li id="foli526" class="notranslate workEmail rightHalf">
 <label class="desc" id="title526" for="Field526">
 OFFICE PHONE
 <span id="req_526" class="req">*</span>
@@ -193,45 +193,85 @@ type="tel" maxlength="255" value="" />
 </li>
 
 
-<li id="foli9" class="notranslate       "  >
+<li id="foli9" class="notranslate"  >
 <label class="desc" id="title9" for="Field9">
-UPLOAD A PHOTO:*
+UPLOAD A PHOTO:
 <span id="req_9" class="req">*</span>
-</label>
-<div>
-<input id="Field9" name="Field9" type="file" class="field file" size="12" tabindex="7" required />
-</div>
-</li>
+
+                        </label>
+                        <div>
+                            <input id="Field9" name="Field9" type="file" class="field file" size="12" tabindex="7" required onchange="return ValidateFileUpload()" //>
+                        </div>
+                        <img src="img/icon_30334.png" id="image_holder">
+
+                    </li>
+
+<script type="text/javascript">
+    function ValidateFileUpload() {
+        var fuData = document.getElementById('Field9');
+        var FileUploadPath = fuData.value;
+
+//To check if user upload any file
+        if (FileUploadPath == '') {
+            // alert("Please upload an image");
+
+        } else {
+            var Extension = FileUploadPath.substring(
+                    FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+//The file uploaded is an image
+
+if (Extension == "gif" || Extension == "png" || Extension == "bmp"
+                    || Extension == "jpeg" || Extension == "jpg") {
+
+// To Display
+                if (fuData.files && fuData.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        $('#image_holder').show('fast');
+                        $('#image_holder').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(fuData.files[0]);
+                }
+
+            } 
+
+//The file upload is NOT an image
+else {
+                // alert("Photo only allows file types of GIF, PNG, JPG, JPEG and BMP. ");
+
+            }
+        }
+    }
+</script>
+
+
+
 <li id="foli11" 
-class="notranslate photo_description     "><label class="desc" id="title11" for="Field11">
-PHOTO DESCRIPTION:*
+class="notranslate photo_description"><label class="desc" id="title11" for="Field11">
+PHOTO DESCRIPTION:
 <span id="req_11" class="req">*</span>
 </label>
 
 <div>
-<textarea id="Field11" 
-name="Field11" 
-class="field textarea medium" 
-spellcheck="true" 
-rows="10" cols="50" 
-tabindex="8" 
-onkeyup=""
-required  ></textarea>
+<textarea id="Field11" name="Field11" class="field textarea medium" spellcheck="true" rows="10" cols="50" tabindex="8" onkeyup="" required></textarea>
 
 </div>
 </li>
-<li id="foli13" class="notranslate account_name leftHalf     ">
+<li id="foli13" class="notranslate account_name leftHalf">
 <label class="desc" id="title13" for="Field13">
-PURCHASED FROM:*
+PURCHASED FROM:
 <span id="req_13" class="req">*</span>
 </label>
 <div>
 <input id="Field13" name="Field13" type="text" class="field text medium" value="" maxlength="255" tabindex="9" onkeyup="" required />
 </div>
 <p class="instruct" id="instruct13"><small>(I.E Office Max Grand & Toy, Staples etc.)</small></p>
-</li><li id="foli638" class="notranslate surface_application rightHalf      ">
+</li><li id="foli638" class="notranslate surface_application rightHalf">
 <label class="desc" id="title638" for="Field638">
-SURFACE:*
+SURFACE:
 <span id="req_638" class="req">*</span>
 </label>
 <div>
@@ -289,13 +329,13 @@ Ceramic
 </select>
 </div>
 <p class="instruct" id="instruct638"><small> (i.e. plastic, metal)</small></p>
-</li><li id="foli632" class="notranslate section sharpiesUsed     ">
+</li><li id="foli632" class="notranslate section sharpiesUsed">
 <section>
 <h3 id="title632">
 </h3>
 <div id="instruct632">Please check all that apply (at least one)</div>
 </section>
-</li><li id="foli17" class="notranslate sharpiesUsed twoColumns     ">
+</li><li id="foli17" class="notranslate sharpiesUsed twoColumns">
 <fieldset>
 <![if !IE | (gte IE 8)]>
 
@@ -512,7 +552,7 @@ SHARPIE(S) USED:*
 <div>
 <span>
 <input id="Field418" name="Field418" type="checkbox" class="field checkbox" value="I agree to the terms of use*" tabindex="47" />
-<label class="choice" for="Field418">I agree to the <a href="">terms of use*</a></label>
+<label class="choice" for="Field418">I agree to the <a href="">&nbsp;terms of use*</a></label>
 </span>
 </div>
 </fieldset>
@@ -536,19 +576,24 @@ SHARPIE(S) USED:*
     </div> <!--container-->
 
 
-            <footer class="site-footer" role="contentinfo">
-                <a href="http://www.sharpie.com/Pages/GlobalLanding.aspx"><img class="bottom-logo left" src="img/sharpie-tiny-logo.png"  target="_blank"></a>
 
-                <p class="tiny-text right">
-                    <a class="copyright"> © 2014 </a>
-                    <a class="legal"  target="_blank" href="http://www.sharpie.com/enus/Pages/Privacy.aspx"> &nbsp;Legal & Privacy </a>
-                    <a class="terms"  target="_blank" href="http://www.sharpie50ways.com/terms.html">&nbsp;&nbsp;&nbsp;Terms of Use</a>
-                    <a class=""       target="_blank" href="http://www.sharpie.com/enus/Pages/ContactUs.aspx">&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(FR)&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index-ca.html"    target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index.html" target="_blank" ><img class="flags" src="img/us.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>                      
-                </p>
-            </footer>
+<footer class="site-footer" role="contentinfo">
+    <a href="http://www.sharpie.com/Pages/GlobalLanding.aspx"><img class="bottom-logo left" src="img/sharpie-tiny-logo.png"  target="_blank"></a>
+
+    <p class="tiny-text right">
+        <a class="copyright"> © 2014 </a>
+        <a class="legal"  target="_blank" href="http://www.sharpie.com/enus/Pages/Privacy.aspx"> &nbsp;Legal & Privacy </a>
+        <a class="terms"  target="_blank" href="http://www.sharpie50ways.com/terms.html">&nbsp;&nbsp;&nbsp;Terms of Use</a>
+        <a class=""       target="_blank" href="http://www.sharpie.com/enus/Pages/ContactUs.aspx">&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(FR)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-ca.html"    target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(EN)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/us.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>                      
+    </p>
+</footer>
+
+
+
+
 
 
 

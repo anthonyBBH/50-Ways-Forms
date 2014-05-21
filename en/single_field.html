@@ -12,9 +12,10 @@
     <!-- CSS -->
     <link href="css/structure.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -73,7 +74,7 @@
          action="https://nwlebiz.wufoo.com/forms/r1hmxidj1a4zhvc/#public">
 
          
-                <li id="foli226" class="notranslate activation-code     ">
+                <li id="foli226" class="notranslate activation-code">
                     <label class="desc" id="title226" for="Field226">
                         ENTER YOUR ACTIVATION CODE:
                         <span id="req_226" class="req">*</span>
@@ -88,7 +89,7 @@
                     </div>
                     <p class="instruct" id="instruct226"><small>This code is located on the flyer or other promotional material given to you by our Sales Representative.</small></p>
                 </li>
-                <li id="foli228" class="notranslate cloak activation-code-verify     ">
+                <li id="foli228" class="notranslate cloak activation-code-verify">
                     <fieldset>
                         <![if !IE | (gte IE 8)]>
                         <legend id="title228" class="desc hide">You must enter a valid Activation Code:*
@@ -108,7 +109,7 @@ You must enter a valid Activation Code:*
                         </div>
                     </fieldset>
                 </li>
-                <li id="foli24" class="notranslate terms-of-use     ">
+                <li id="foli24" class="notranslate terms-of-use">
                     <fieldset>
                         <![if !IE | (gte IE 8)]>
                         <legend id="title24" class="desc hide">
@@ -145,7 +146,7 @@ You must enter a valid Activation Code:*
                 alert('This code is no longer elegible');
                 txtCode.value = '';
                 txtCode.focus();
-
+wufoo
                 return false;
             }
             else if (txtCode.value.trim() != "" && results == -1) {
@@ -163,7 +164,7 @@ You must enter a valid Activation Code:*
             var count = -1; //Not a valid code
 
             jQuery.ajax({
-                url: '../codeCheck.json?Code=' + val1 + '&formhash=wnw6cw71yjrid7',
+                url: '../codeCheck.json?Code=' + val1 + '&formhash=r1hmxidj1a4zhvc',
                 dataType: 'json',
                 success: function (result) {
                     for(var i in result){

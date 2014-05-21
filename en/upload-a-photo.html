@@ -12,9 +12,10 @@
     <!-- CSS -->
     <link href="css/structure.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" type="text/css">
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -199,13 +200,14 @@ OFFICE PHONE
 <label class="desc" id="title9" for="Field9">
 UPLOAD A PHOTO:*
 <span id="req_9" class="req">*</span>
-</label>
-<div>
-<input id="Field9" name="Field9" type="file" class="field file" size="12" tabindex="7" required />
-</div>
-</li>
 
+                        </label>
+                        <div>
+                            <input id="Field9" name="Field9" type="file" class="field file" size="12" tabindex="7" required onchange="return ValidateFileUpload()" //>
+                        </div>
+                        <img src="img/icon_30334.png" id="image_holder">
 
+                    </li>
 
 <script type="text/javascript">
     function ValidateFileUpload() {
@@ -251,7 +253,7 @@ else {
 
 
 <li id="foli11" 
-class="notranslate photo_description     "><label class="desc" id="title11" for="Field11">
+class="notranslate photo_description"><label class="desc" id="title11" for="Field11">
 PHOTO DESCRIPTION:*
 <span id="req_11" class="req">*</span>
 </label>
@@ -538,7 +540,7 @@ SHARPIE(S) USED:*
 <div>
 <span>
 <input id="Field418" name="Field418" type="checkbox" class="field checkbox" value="I agree to the terms of use*" tabindex="50" />
-<label class="choice" for="Field418">I agree to the <a href="">terms of use*</a></label>
+<label class="choice" for="Field418">I agree to the <a href="">&nbsp;terms of use*</a></label>
 </span>
 </div>
 </fieldset>
@@ -563,19 +565,26 @@ SHARPIE(S) USED:*
     </div> <!--container-->
 
 
-             <footer class="site-footer" role="contentinfo">
-                <a href="http://www.sharpie.com/Pages/GlobalLanding.aspx"><img class="bottom-logo left" src="img/sharpie-tiny-logo.png"  target="_blank"></a>
 
-                <p class="tiny-text right">
-                    <a class="copyright"> © 2014 </a>
-                    <a class="legal"  target="_blank" href="http://www.sharpie.com/enus/Pages/Privacy.aspx"> &nbsp;Legal & Privacy </a>
-                    <a class="terms"  target="_blank" href="http://www.sharpie50ways.com/terms.html">&nbsp;&nbsp;&nbsp;Terms of Use</a>
-                    <a class=""       target="_blank" href="http://www.sharpie.com/enus/Pages/ContactUs.aspx">&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(FR)&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index-ca.html"    target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>  
-                    <a href="./index.html" target="_blank" ><img class="flags" src="img/us.gif"/>&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>                      
-                </p>
-            </footer>
+
+
+
+<footer class="site-footer" role="contentinfo">
+    <a href="http://www.sharpie.com/Pages/GlobalLanding.aspx"><img class="bottom-logo left" src="img/sharpie-tiny-logo.png"  target="_blank"></a>
+
+    <p class="tiny-text right">
+        <a class="copyright"> © 2014 </a>
+        <a class="legal"  target="_blank" href="http://www.sharpie.com/enus/Pages/Privacy.aspx"> &nbsp;Legal & Privacy </a>
+        <a class="terms"  target="_blank" href="http://www.sharpie50ways.com/terms.html">&nbsp;&nbsp;&nbsp;Terms of Use</a>
+        <a class=""       target="_blank" href="http://www.sharpie.com/enus/Pages/ContactUs.aspx">&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(FR)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-ca.html"    target="_blank" ><img class="flags" src="img/ca.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(EN)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>  
+        <a href="./index-fr.html" target="_blank" ><img class="flags" src="img/us.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;(EN)&nbsp;&nbsp;&nbsp;</a>                      
+    </p>
+</footer>
+
+
+
 
 
     <script>
