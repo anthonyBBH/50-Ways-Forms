@@ -39,53 +39,49 @@ var happy = {
         return photoState;
     }
 
-
-   
 };
 
 
 
+        function validateCode() {            
+            var txtCode = document.getElementById("Field226");
+            var results = txtCode.value.trim() != "" ? getRemainingCode(txtCode.value) : -1;
 
-        // function validateCode() {            
-        //     var txtCode = document.getElementById("Field226");
-        //     var results = txtCode.value.trim() != "" ? getRemainingCode(txtCode.value) : -1;
+            if (results == 0) {
+                alert('This code is no longer elegible');
+                txtCode.value = '';
+                txtCode.focus();
 
-        //     if (results == 0) {
-        //         alert('This code is no longer elegible');
-        //         txtCode.value = '';
-        //         txtCode.focus();
+                return false;
+            }
+            else if (txtCode.value.trim() != "" && results == -1) {
+                alert('Invalid code used');
+                txtCode.value = '';
+                txtCode.focus();
 
-        //         return false;
-        //     }
-        //     else if (txtCode.value.trim() != "" && results == -1) {
-        //         alert('Invalid code used');
-        //         txtCode.value = '';
-        //         txtCode.focus();
+                return false;
+            }
 
-        //         return false;
-        //     }
+            return true;
+        }
 
-        //     return true;
-        // }
+        function getRemainingCode(code) {
+            var count = -1; //Not a valid code
 
-        // function getRemainingCode(val) {
-        //     var count = -1; //Not a valid code
+            jQuery.ajax({
+                url: '../CodeCheck.aspx?Code=' + code + '&formhash=z1o1hyme05bg68p',
+                dataType: 'json',
+                success: function (result) {
+                    count = result.Remaining;
+                    if (isNaN(count))
+                        count = -1;
+                },
+                async: false
+            });
 
-        //     jQuery.ajax({
-        //         url: '../codeCheck.json?Code=' + val1 + '&formhash=wnw6cw71yjrid7',
-        //         dataType: 'json',
-        //         success: function (result) {
-        //             for(var i in result){
-        //                count = result[i].REMAINING;
-        //             }
+            return count;
+        }
 
-        //             if (isNaN(count))
-        //                 count = -1;
-        //         },
 
-        //         async: false
-        //     });
 
-        //     return count;
 
-        // }
